@@ -13,11 +13,11 @@ float consultMax(const std::string& search_term, const std::map<std::string, std
 
     for (it; it != data.end(); ++it)
     {
-        if (data->first == search_term)
+        if (it->first == search_term)
         {
-            for (size_t i = 0; i < data->second.size(); i++)
+            for (size_t i = 0; i < it->second.size(); i++)
             {
-                max_val = data->second.at(i) > max_val ? data->second.at(i) : max_val;
+                max_val = it->second.at(i) > max_val ? it->second.at(i) : max_val;
             }
         }
     }
@@ -25,7 +25,16 @@ float consultMax(const std::string& search_term, const std::map<std::string, std
     return max_val;
 }
 
-std::map<std::string, float> returnMaxMap(const std::map<std::string, std::vector<float>>& in_map) {
-    //implement your function here
+std::map<std::string, float> returnMaxMap(const std::map<std::string, std::vector<float>>& in_map) 
+{
+    std::map<std::string, float> result;
     
+    std::map<std::string, std::vector<float>>::iterator it = in_map.begin();
+
+    for (it; it != in_map.end(); ++it)
+    {
+        result.insert({it->first, consultMax(it->first, in_map)});
+    }
+
+    return result;
 }
