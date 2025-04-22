@@ -41,7 +41,7 @@ public:
 
         array[0] = min_val;
         array[1] = max_val;
-        array[2] = sum / count;
+        array[2] = count > 0 ? sum / count : 0;
 
         return array;
     }
