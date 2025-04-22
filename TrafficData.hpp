@@ -40,9 +40,9 @@ void updateTrafficData(const std::string& filename, std::map<std::string, int>& 
     std::map<std::string, int>::iterator it1 = dataMap.begin();
     std::map<std::string, int>::iterator it2 = updatedMap.begin();
 
-    bool flag = false;
     for (auto it2 = updatedMap.begin(); it != updatedMap.end(); ++it2)
     {
+        bool flag = false;
         for (auto it1 = dataMap.begin(); it != dataMap.end(); ++it1)
         {
             if (it1->first == it2->first)
