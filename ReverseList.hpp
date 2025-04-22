@@ -1,6 +1,8 @@
 #pragma once
 
-
+#include <iostream>
+#include <climit>
+#include <vector>
 
 struct Node {
     int data;
@@ -19,6 +21,17 @@ public:
     LinkedList reverseList() const 
     {
         LinkedList result;
+
+        if (result.head->next == nullptr)
+        {
+            return *this;
+        }
+
+        else
+        {
+            std::vector<int> allData;
+
+            
     }
 
     Node* head = nullptr;
