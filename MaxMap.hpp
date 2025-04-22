@@ -9,7 +9,7 @@ float consultMax(const std::string& search_term, const std::map<std::string, std
 {
     float max_val = -1;
     
-    std::map<std::string, std::vector<float>>::iterator it = data.begin();
+    std::map<std::string, std::vector<float>>::const_iterator it = data.begin();
 
     for (it; it != data.end(); ++it)
     {
@@ -29,7 +29,7 @@ std::map<std::string, float> returnMaxMap(const std::map<std::string, std::vecto
 {
     std::map<std::string, float> result;
     
-    std::map<std::string, std::vector<float>>::iterator it = in_map.begin();
+    std::map<std::string, std::vector<float>>::const_iterator it = in_map.begin();
 
     for (it; it != in_map.end(); ++it)
     {
