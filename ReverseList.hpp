@@ -32,7 +32,7 @@ public:
 
             while(currentNode != nullptr)
             {
-                result.addHead(current->data);
+                result.addHead(currentNode->data);
                 currentNode = currentNode->next;
             }
         }
