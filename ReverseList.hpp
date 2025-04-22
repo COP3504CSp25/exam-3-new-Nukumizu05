@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 struct Node {
     int data;
     Node* next;
@@ -14,8 +16,9 @@ public:
         head = newNode;
     }
     
-    LinkedList reverseList() const {
-        // implement your function here!
+    LinkedList reverseList() const 
+    {
+        LinkedList result;
     }
 
     Node* head = nullptr;
