@@ -39,8 +39,8 @@ public:
             currentNode = currentNode->next;
         }
 
-        array[0] = min_val;
-        array[1] = max_val;
+        array[0] = count > 0 ? min_val : 0;
+        array[1] = count > 0 ? max_val : 0;
         array[2] = count > 0 ? sum / count : 0;
 
         return array;
