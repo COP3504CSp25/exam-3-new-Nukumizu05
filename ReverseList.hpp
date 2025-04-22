@@ -20,21 +20,13 @@ public:
     LinkedList reverseList() const 
     {
         LinkedList result;
+        
+        Node* currentNode = head;
 
-        if (result.head->next == nullptr)
+        while(currentNode != nullptr)
         {
-            return *this;
-        }
-
-        else
-        {
-            Node* currentNode = head;
-
-            while(currentNode != nullptr)
-            {
-                result.addHead(currentNode->data);
-                currentNode = currentNode->next;
-            }
+            result.addHead(currentNode->data);
+            currentNode = currentNode->next;
         }
 
         return result;
